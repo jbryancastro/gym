@@ -1,4 +1,4 @@
-* {
+﻿* {
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
@@ -11,7 +11,7 @@ body {
 }
 
 .navegacion {
-    width: 425px;
+    width: min(95vw, 1400px);
     margin: 30px auto;
     background-color: #61616127;
     text-align: center;
@@ -19,8 +19,8 @@ body {
     transition: background-color 0.3s;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     border-radius: 10px;
-    overflow: visible;    
-    position: relative;       
+    position: relative; 
+        
 
 }
 
@@ -28,15 +28,27 @@ body {
     list-style: none;
 }
 
+.menu {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
 .menu > li{
    position: relative;
-   display: inline-block;    
+   display: block;
+   flex: 0 0 auto;
 }
 
 .menu > li > a{
     display: block;
     padding: 15px 20px;
     color: 353535;
+    font-size: 30px;
+    font-weight: 600;
     font-family: "open sans";
     text-decoration: none;
 }
@@ -54,9 +66,11 @@ body {
     transition: opacity 1.5s;
 }
 .submenu li a{
-    display: inline;
+    display: block;
     padding: 15px;
     color: ffff;
+    font-size: 30px;
+    font-weight: 600;
     font-family: "open sans";
     text-decoration: none;
 }
@@ -74,10 +88,12 @@ body {
      transition: opacity 1.5s;
  }
  .submenu-2 li a{
-     display: inline;
+     display: block;
      padding: 15px;
      color: ffff;
-     font-family: "open sans";
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "open sans";
      text-decoration: none;
  }
  .menu li:hover .submenu-2 {
@@ -93,20 +109,34 @@ body {
      transition: opacity 1.5s;
  }
  .submenu-3 li a{
-     display: inline;
+     display: block;
      padding: 15px;
      color: ffff;
-     font-family: "open sans";
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "open sans";
      text-decoration: none;
  }
  .menu li:hover .submenu-3 {
     visibility: visible;
     opacity: 1;
  }
+
+.submenu li,
+.submenu-2 li,
+.submenu-3 li {
+    margin: 1px 0;
+}
+
+.submenu li a,
+.submenu-2 li a,
+.submenu-3 li a {
+    padding: 6px 15px;
+}
  /*contenido*/
     
 .texto {
-    font-size: 15;
+    font-size: 28px;
     padding: 10px;
     margin: 20px;
  }
@@ -148,11 +178,11 @@ body {
     box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     border-radius: 10px;
     margin-top: 20px;
-    transition: background-color 0.5s;
+    transition: background-color 0.s;
     cursor: pointer;
 }
 .titulo-3{
-    font-size: 20px;
+    font-size: 35px;
     padding: 20px;
     color: black;
     text-decoration-line: underline;
@@ -165,17 +195,19 @@ body {
 
 .titulo-4{
     font-size: 30px;
-    padding: 10px;
+    padding: 20px;
     color: black;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    text-decoration: underline;
+    
     
     
 }
 .navegacion-2 {
-    width: 250px;
+    width: 300px;
     margin: 10px ;
-    height: 500px;
+    height: 550px;
     background-color: #61616127;
     text-align: center;
     font-family: "open sans";
@@ -193,9 +225,9 @@ body {
     
 }
 .navegacion-3 {
-    width: 250px;
+    width: 300px;
     margin: 10px ;
-    height: 500px;
+    height: 550px;
     background-color: #61616127;
     text-align: center;
     font-family: "open sans";
@@ -211,9 +243,9 @@ body {
     
 }
 .navegacion-4 {
-    width: 250px;
+    width: 300px;
     margin: 10px;
-    height: 500px;
+    height: 550px;
     background-color: #61616127;
     text-align: center;
     font-family: "open sans";
@@ -232,9 +264,9 @@ body {
 
 
 .navegacion-5{
-    width: 250px;
+    width: 300px;
     margin: 10px;
-    height: 500px;
+    height: 550px;
     background-color: #61616127;
     text-align: center;
     font-family: "open sans";
@@ -251,9 +283,9 @@ body {
     
 }
 .navegacion-6{
-    width: 250px;
+    width: 300px;
     margin: 10px;
-    height: 500px;
+    height: 550px;
     background-color: #61616127;
     text-align: center;
     font-family: "open sans";
@@ -269,6 +301,43 @@ body {
     
 }
 
+.menu-1 > .navegacion-2,
+.menu-1 > .navegacion-3,
+.menu-1 > .navegacion-4,
+.menu-1 > .navegacion-5,
+.menu-1 > .navegacion-6 {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.menu-1 > .navegacion-2 > ul,
+.menu-1 > .navegacion-3 > ul,
+.menu-1 > .navegacion-4 > ul,
+.menu-1 > .navegacion-5 > ul,
+.menu-1 > .navegacion-6 > ul {
+    text-align: left;
+    padding: 0 14px 0 18px;
+    box-sizing: border-box;
+}
+
+.menu-1 > .navegacion-2 > ul > li,
+.menu-1 > .navegacion-3 > ul > li,
+.menu-1 > .navegacion-4 > ul > li,
+.menu-1 > .navegacion-5 > ul > li,
+.menu-1 > .navegacion-6 > ul > li {
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+.menu-1 > .navegacion-2 > ul > li:not(:first-child)::before,
+.menu-1 > .navegacion-3 > ul > li:not(:first-child)::before,
+.menu-1 > .navegacion-4 > ul > li:not(:first-child)::before,
+.menu-1 > .navegacion-5 > ul > li:not(:first-child)::before,
+.menu-1 > .navegacion-6 > ul > li:not(:first-child)::before {
+    content: "• ";
+}
+
 .menu-1 { 
     
     display: flex;
@@ -280,6 +349,7 @@ body {
     box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     border-radius: 10px;
     transition: background-color 0.5s;
+    height: 700px;
 
     
 }
@@ -290,6 +360,7 @@ body {
     text-align: left;  
     margin-left: 40px;
     transition: background-color 0.3s;
+    font-size: 25px;
 }
 
 .final {
@@ -298,3 +369,9 @@ body {
     font-size: 10px;
     
 }
+
+
+
+
+
+
